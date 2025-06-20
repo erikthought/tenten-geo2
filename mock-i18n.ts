@@ -13,6 +13,21 @@ export const i18nData = {
       pricing: "Pricing",
       contact: "Contact",
       getStarted: "Get Started"
+    },
+    labels: {
+      trafficIncrease: "Average Traffic Increase",
+      leadBoost: "Lead Generation Boost",
+      revenueGrowth: "Revenue Growth"
+    },
+    sections: {
+      chooseTitle: "Why Choose Tenten GEO?",
+      chooseSubtitle: "Our AI-driven approach delivers measurable results in global markets",
+      servicesTitle: "Our GEO Services",
+      servicesSubtitle: "Comprehensive solutions to dominate AI-powered search engines",
+      pricingTitle: "Choose Your Growth Plan",
+      pricingSubtitle: "Flexible packages designed to scale with your global expansion goals",
+      testimonialsTitle: "Client Success Stories",
+      testimonialsSubtitle: "See how companies like yours achieved remarkable growth with our GEO solutions"
     }
   },
   'zh-tw': {
@@ -28,21 +43,51 @@ export const i18nData = {
       pricing: "定價",
       contact: "聯絡",
       getStarted: "開始使用"
+    },
+    labels: {
+      trafficIncrease: "平均流量增長",
+      leadBoost: "潛在客戶提升",
+      revenueGrowth: "營收成長"
+    },
+    sections: {
+      chooseTitle: "為何選擇 Tenten GEO？",
+      chooseSubtitle: "我們的 AI 驅動方法在全球市場帶來可衡量的成果",
+      servicesTitle: "GEO 服務",
+      servicesSubtitle: "稱霸 AI 搜尋引擎的全方位解決方案",
+      pricingTitle: "選擇合適的成長方案",
+      pricingSubtitle: "可隨全球佈局目標擴充的彈性方案",
+      testimonialsTitle: "成功案例",
+      testimonialsSubtitle: "看看企業如何透過 GEO 方案獲得卓越成長"
     }
   },
   ja: {
     // Japanese
     hero: {
       headline: "先進的なGEO戦略でAI検索結果を支配する",
-      subheadline: "競合他社が従来のSEOに注力している間に、ChatGPT、Claude、Perplexityなどのアイ検索エンジンの最前線にブランドを位置づけましょう。",
+      subheadline: "競合他社が従来のSEOに注力している間に、ChatGPT、Claude、PerplexityなどのAI検索エンジンの最前線にブランドを位置づけましょう。",
       cta: "GEO監査を取得",
       secondaryCta: "相談予約"
     },
     nav: {
       services: "サービス",
       pricing: "料金",
-      contact: "お問合せ",
+      contact: "お問い合わせ",
       getStarted: "始める"
+    },
+    labels: {
+      trafficIncrease: "平均トラフィック増加",
+      leadBoost: "リード生成向上",
+      revenueGrowth: "収益成長"
+    },
+    sections: {
+      chooseTitle: "Tenten GEO を選ぶ理由",
+      chooseSubtitle: "AI駆動アプローチでグローバル市場で測定可能な成果を",
+      servicesTitle: "GEO サービス",
+      servicesSubtitle: "AI検索エンジンでトップを獲得する包括的ソリューション",
+      pricingTitle: "料金プラン",
+      pricingSubtitle: "グローバル展開目標に合わせた柔軟なパッケージ",
+      testimonialsTitle: "導入事例",
+      testimonialsSubtitle: "GEOソリューションで驚異的な成長を遂げた企業の声"
     }
   },
   ko: {
@@ -148,6 +193,21 @@ export const i18nData = {
       pricing: "定价",
       contact: "联系",
       getStarted: "开始使用"
+    },
+    labels: {
+      trafficIncrease: "平均流量增长",
+      leadBoost: "潜在客户提升",
+      revenueGrowth: "营收增长"
+    },
+    sections: {
+      chooseTitle: "为什么选择 Tenten GEO？",
+      chooseSubtitle: "我们的 AI 驱动方法在全球市场带来可衡量的成果",
+      servicesTitle: "GEO 服务",
+      servicesSubtitle: "称霸 AI 搜索引擎的全面解决方案",
+      pricingTitle: "选择您的成长计划",
+      pricingSubtitle: "可随全球扩张目标扩展的灵活方案",
+      testimonialsTitle: "客户成功案例",
+      testimonialsSubtitle: "看看类似公司如何通过 GEO 方案实现显著增长"
     }
   },
   ru: {

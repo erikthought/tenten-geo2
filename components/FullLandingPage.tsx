@@ -26,66 +26,93 @@ interface Props {
 }
 
 export default function FullLandingPage({ lang }: Props) {
-  const t = getI18nData(lang) ?? getI18nData('en')
+  const t = (getI18nData(lang) ?? getI18nData('en')) as any
 
-  // Fallback texts in English for sections that are not translated yet
-  const benefits = [
-    {
-      title: 'AI-First Strategy',
-      icon: Target,
-      description:
-        'Leverage cutting-edge AI technology to spot market opportunities and optimize content for global audiences.',
-    },
-    {
-      title: 'Future-Proof Growth',
-      icon: TrendingUp,
-      description:
-        'Build scalable systems that adapt to ever-changing market conditions and search algorithms.',
-    },
-    {
-      title: 'Authority Building',
-      icon: Shield,
-      description:
-        'Establish your brand as the leading solution across multiple markets through strategic content positioning.',
-    },
-    {
-      title: 'Competitive Advantage',
-      icon: Zap,
-      description:
-        'Stay ahead of competitors with data-driven insights and rapid market-penetration strategies.',
-    },
-  ]
+  // --- NEW TRANSLATION LOOKUPS ---
+  const labels = {
+    trafficIncrease: t.labels?.trafficIncrease ?? 'Average Traffic Increase',
+    leadBoost: t.labels?.leadBoost ?? 'Lead Generation Boost',
+    revenueGrowth: t.labels?.revenueGrowth ?? 'Revenue Growth',
+  }
 
-  const features = [
-    {
-      title: 'Comprehensive GEO Audit',
-      icon: Target,
-      description:
-        'Deep analysis of your current digital presence in target markets with actionable recommendations.',
-    },
-    {
-      title: 'Content Strategy Development',
-      icon: Globe,
-      description:
-        'AI-driven content planning tailored to local market search behaviours and preferences.',
-    },
-    {
-      title: 'Technical Implementation',
-      icon: BarChart3,
-      description:
-        'Complete technical SEO optimisation including hreflang, site structure and performance improvements.',
-    },
-    {
-      title: 'Performance Monitoring',
-      icon: TrendingUp,
-      description:
-        'Ongoing tracking and optimisation with detailed reporting and strategic adjustments.',
-    },
-  ]
+  const sectionText = {
+    chooseTitle: t.sections?.chooseTitle ?? 'Why Choose Tenten GEO?',
+    chooseSubtitle:
+      t.sections?.chooseSubtitle ??
+      'Our AI-driven approach delivers measurable results in global markets',
+    servicesTitle: t.sections?.servicesTitle ?? 'Our GEO Services',
+    servicesSubtitle:
+      t.sections?.servicesSubtitle ??
+      'Comprehensive solutions to dominate AI-powered search engines',
+    pricingTitle: t.sections?.pricingTitle ?? 'Choose Your Growth Plan',
+    pricingSubtitle:
+      t.sections?.pricingSubtitle ??
+      'Flexible packages designed to scale with your global expansion goals',
+    testimonialsTitle: t.sections?.testimonialsTitle ?? 'Client Success Stories',
+    testimonialsSubtitle:
+      t.sections?.testimonialsSubtitle ??
+      'See how companies like yours achieved remarkable growth with our GEO solutions',
+  }
+
+  const benefits =
+    t.benefits ?? [
+      {
+        title: 'AI-First Strategy',
+        icon: Target,
+        description:
+          'Leverage cutting-edge AI technology to spot market opportunities and optimize content for global audiences.',
+      },
+      {
+        title: 'Future-Proof Growth',
+        icon: TrendingUp,
+        description:
+          'Build scalable systems that adapt to ever-changing market conditions and search algorithms.',
+      },
+      {
+        title: 'Authority Building',
+        icon: Shield,
+        description:
+          'Establish your brand as the leading solution across multiple markets through strategic content positioning.',
+      },
+      {
+        title: 'Competitive Advantage',
+        icon: Zap,
+        description:
+          'Stay ahead of competitors with data-driven insights and rapid market-penetration strategies.',
+      },
+    ]
+
+  const features =
+    t.features ?? [
+      {
+        title: 'Comprehensive GEO Audit',
+        icon: Target,
+        description:
+          'Deep analysis of your current digital presence in target markets with actionable recommendations.',
+      },
+      {
+        title: 'Content Strategy Development',
+        icon: Globe,
+        description:
+          'AI-driven content planning tailored to local market search behaviours and preferences.',
+      },
+      {
+        title: 'Technical Implementation',
+        icon: BarChart3,
+        description:
+          'Complete technical SEO optimisation including hreflang, site structure and performance improvements.',
+      },
+      {
+        title: 'Performance Monitoring',
+        icon: TrendingUp,
+        description:
+          'Ongoing tracking and optimisation with detailed reporting and strategic adjustments.',
+      },
+    ]
 
   const testimonials = [
     {
-      quote: `“Tenten's GEO strategy boosted our qualified leads by 312% across 8 markets. Their AI-driven approach is groundbreaking.”`,
+      quote: `"Tenten's GEO strategy boosted our qualified leads by 312% across 8 markets. Their AI-driven approach is groundbreaking."`,
       author: 'Sarah Chen',
       role: 'VP Marketing',
       company: 'HealthTech Solutions',
@@ -93,7 +120,7 @@ export default function FullLandingPage({ lang }: Props) {
     },
     {
       quote:
-        '“Within 6 months we achieved #1 rankings for 15 high-value keywords in 5 countries. ROI exceeded expectations by 180%.”',
+        '"Within 6 months we achieved #1 rankings for 15 high-value keywords in 5 countries. ROI exceeded expectations by 180%."',
       author: 'Marcus Rodriguez',
       role: 'Head of Growth',
       company: 'FinanceFlow',
@@ -174,9 +201,9 @@ export default function FullLandingPage({ lang }: Props) {
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Stat icon={TrendingUp} value="85%" label="Average Traffic Increase" />
-            <Stat icon={Users} value="3.2x" label="Lead Generation Boost" />
-            <Stat icon={BarChart3} value="127%" label="Revenue Growth" />
+            <Stat icon={TrendingUp} value="85%" label={labels.trafficIncrease} />
+            <Stat icon={Users} value="3.2x" label={labels.leadBoost} />
+            <Stat icon={BarChart3} value="127%" label={labels.revenueGrowth} />
           </div>
         </div>
       </section>
@@ -184,7 +211,7 @@ export default function FullLandingPage({ lang }: Props) {
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <SectionHeader title="Why Choose Tenten GEO?" subtitle="Our AI-driven approach delivers measurable results in global markets" />
+          <SectionHeader title={sectionText.chooseTitle} subtitle={sectionText.chooseSubtitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((b, idx) => (
@@ -197,7 +224,7 @@ export default function FullLandingPage({ lang }: Props) {
       {/* Features Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeader title="Our GEO Services" subtitle="Comprehensive solutions to dominate AI-powered search engines" />
+          <SectionHeader title={sectionText.servicesTitle} subtitle={sectionText.servicesSubtitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((f, idx) => (
@@ -210,7 +237,7 @@ export default function FullLandingPage({ lang }: Props) {
       {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <SectionHeader title="Choose Your Growth Plan" subtitle="Flexible packages designed to scale with your global expansion goals" />
+          <SectionHeader title={sectionText.pricingTitle} subtitle={sectionText.pricingSubtitle} />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <PricingCard
@@ -246,7 +273,7 @@ export default function FullLandingPage({ lang }: Props) {
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <SectionHeader title="Client Success Stories" subtitle="See how companies like yours achieved remarkable growth with our GEO solutions" />
+          <SectionHeader title={sectionText.testimonialsTitle} subtitle={sectionText.testimonialsSubtitle} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {testimonials.map((t, idx) => (
