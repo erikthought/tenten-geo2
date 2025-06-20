@@ -25,6 +25,20 @@ interface Props {
   lang: string
 }
 
+type IconType = React.ComponentType<{ className?: string }>
+
+interface Benefit {
+  title: string
+  description: string
+  icon: IconType
+}
+
+interface Feature {
+  title: string
+  description: string
+  icon: IconType
+}
+
 export default function FullLandingPage({ lang }: Props) {
   const t = (getI18nData(lang) ?? getI18nData('en')) as any
 
@@ -54,7 +68,7 @@ export default function FullLandingPage({ lang }: Props) {
       'See how companies like yours achieved remarkable growth with our GEO solutions',
   }
 
-  const benefits =
+  const benefits: Benefit[] =
     t.benefits ?? [
       {
         title: 'AI-First Strategy',
@@ -82,7 +96,7 @@ export default function FullLandingPage({ lang }: Props) {
       },
     ]
 
-  const features =
+  const features: Feature[] =
     t.features ?? [
       {
         title: 'Comprehensive GEO Audit',
