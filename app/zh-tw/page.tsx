@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle, Star } from 'lucide-react'
 import Image from 'next/image'
-import { geoData } from '@/mock'
 import { getI18nData } from '@/mock-i18n'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 
@@ -17,7 +16,7 @@ export default function TraditionalChinesePage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center">
             <Image
-              src="/images/tenten_logo.png"
+              src="https://cdn.prod.website-files.com/664ac0da22e63b78c9005ce5/664ac2634d948a1fe260aaec_tenten_logo.png"
               alt="Tenten Logo"
               width={128}
               height={32}
@@ -47,18 +46,18 @@ export default function TraditionalChinesePage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-fluid-4xl font-bold text-slate-900 mb-6 text-balance">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               {t.hero.headline}
             </h1>
-            <p className="text-fluid-lg text-slate-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               {t.hero.subheadline}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://tenten.co/contact" target="_blank" rel="noopener noreferrer" className="bg-primary-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-primary-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
+              <a href="https://tenten.co/contact" target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                 {t.hero.cta}
                 <ArrowRight className="w-5 h-5" />
               </a>
-              <a href="https://go.tenten.co/meet" target="_blank" rel="noopener noreferrer" className="border border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-slate-50 transition-all duration-200 text-center">
+              <a href="https://go.tenten.co/meet" target="_blank" rel="noopener noreferrer" className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-all duration-200 text-center">
                 {t.hero.secondaryCta}
               </a>
             </div>
@@ -70,19 +69,36 @@ export default function TraditionalChinesePage() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {geoData.stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-fluid-3xl font-bold text-primary-600 mb-2">{stat.number}</div>
-                <div className="text-slate-600">{stat.label}</div>
-              </motion.div>
-            ))}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-blue-600 mb-2">85%</div>
+              <div className="text-gray-600">平均流量增長</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-blue-600 mb-2">3.2x</div>
+              <div className="text-gray-600">潛在客戶提升</div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="text-4xl font-bold text-blue-600 mb-2">127%</div>
+              <div className="text-gray-600">營收成長</div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -94,14 +110,14 @@ export default function TraditionalChinesePage() {
             <div>
               <div className="mb-4">
                 <Image
-                  src="/images/tenten_logo.png"
+                  src="https://cdn.prod.website-files.com/664ac0da22e63b78c9005ce5/664ac2634d948a1fe260aaec_tenten_logo.png"
                   alt="Tenten Logo"
                   width={128}
                   height={32}
-                  className="h-8 w-auto object-contain"
+                  className="h-8 w-auto object-contain brightness-0 invert"
                 />
               </div>
-              <p className="text-slate-400">
+              <p className="text-gray-400">
                 透過AI優先策略引領搜尋優化的未來。
               </p>
             </div>

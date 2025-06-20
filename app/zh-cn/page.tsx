@@ -11,7 +11,7 @@ export default function SimplifiedChinesePage() {
     <main className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <header className="border-b border-slate-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center"><Image src="/images/tenten_logo.png" alt="Tenten Logo" width={128} height={32} className="h-8 w-auto object-contain" /></div>
+          <div className="flex items-center"><Image src="https://cdn.prod.website-files.com/664ac0da22e63b78c9005ce5/664ac2634d948a1fe260aaec_tenten_logo.png" alt="Tenten Logo" width={128} height={32} className="h-8 w-auto object-contain" /></div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#services">{t.nav.services}</a>
             <a href="#pricing">{t.nav.pricing}</a>
