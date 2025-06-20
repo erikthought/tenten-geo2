@@ -1,16 +1,16 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star, TrendingUp, Users, BarChart3, Target, Globe, Shield, Zap } from 'lucide-react'
+import { ArrowRight, TrendingUp, Users, BarChart3 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { getI18nData } from '@/mock-i18n'
 
-export default function SimplifiedChinesePage() {
-  const t = getI18nData('zh-cn')
+export default function RussianPage() {
+  const t = getI18nData('ru')
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -30,8 +30,7 @@ export default function SimplifiedChinesePage() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">{t.nav.services}</Link>
             <Link href="#pricing" className="text-gray-600 hover:text-blue-600 transition-colors">{t.nav.pricing}</Link>
-            <Link href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors">案例研究</Link>
-            <Link href="https://tenten.co/about" className="text-gray-600 hover:text-blue-600 transition-colors">关于我们</Link>
+            <Link href="https://tenten.co/about" className="text-gray-600 hover:text-blue-600 transition-colors">О нас</Link>
           </nav>
 
           <div className="flex items-center space-x-4">
@@ -90,7 +89,7 @@ export default function SimplifiedChinesePage() {
                 <TrendingUp className="h-8 w-8 text-blue-600" />
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">85%</div>
-              <div className="text-gray-600">平均流量增长</div>
+              <div className="text-gray-600">Средний рост трафика</div>
             </motion.div>
             <motion.div
               className="text-center"
@@ -103,7 +102,7 @@ export default function SimplifiedChinesePage() {
                 <Users className="h-8 w-8 text-blue-600" />
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">3.2x</div>
-              <div className="text-gray-600">潜在客户提升</div>
+              <div className="text-gray-600">Увеличение генерации лидов</div>
             </motion.div>
             <motion.div
               className="text-center"
@@ -116,17 +115,16 @@ export default function SimplifiedChinesePage() {
                 <BarChart3 className="h-8 w-8 text-blue-600" />
               </div>
               <div className="text-4xl font-bold text-gray-900 mb-2">127%</div>
-              <div className="text-gray-600">营收增长</div>
+              <div className="text-gray-600">Рост доходов</div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section - Simplified */}
+      {/* Pricing Section */}
       <section id="pricing" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Standard Package */}
             <Card className="relative h-full">
               <CardHeader className="text-center pb-8">
                 <CardTitle className="text-2xl mb-2">Standard GEO Package</CardTitle>
@@ -137,14 +135,13 @@ export default function SimplifiedChinesePage() {
               <CardContent>
                 <Button className="w-full" variant="outline" size="lg" asChild>
                   <Link href="https://tenten.co/contact">
-                    开始
+                    Начать
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
               </CardContent>
             </Card>
 
-            {/* Premium Package */}
             <Card className="relative h-full border-blue-500 border-2">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -160,7 +157,7 @@ export default function SimplifiedChinesePage() {
               <CardContent>
                 <Button className="w-full" size="lg" asChild>
                   <Link href="https://tenten.co/contact">
-                    开始
+                    Начать
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -182,10 +179,13 @@ export default function SimplifiedChinesePage() {
                 height={32}
                 className="h-8 w-auto mb-4 brightness-0 invert"
               />
+              <p className="text-gray-400 mb-6">
+                AI-powered global expansion optimization.
+              </p>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">连接</h3>
+              <h3 className="text-lg font-semibold mb-4">Связаться</h3>
               <ul className="space-y-2">
                 <li><Link href="https://instagram.com/tenten.co" className="text-gray-400 hover:text-white transition-colors">Instagram</Link></li>
                 <li><Link href="https://www.youtube.com/@tenten_ai" className="text-gray-400 hover:text-white transition-colors">YouTube</Link></li>
@@ -194,27 +194,27 @@ export default function SimplifiedChinesePage() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">公司</h3>
+              <h3 className="text-lg font-semibold mb-4">Компания</h3>
               <ul className="space-y-2">
-                <li><Link href="https://tenten.co/about" className="text-gray-400 hover:text-white transition-colors">关于我们</Link></li>
-                <li><Link href="https://tenten.co/learning/" className="text-gray-400 hover:text-white transition-colors">博客</Link></li>
-                <li><Link href="https://tenten.co/portfolio" className="text-gray-400 hover:text-white transition-colors">案例研究</Link></li>
-                <li><Link href="https://tenten.co/contact" className="text-gray-400 hover:text-white transition-colors">联系</Link></li>
+                <li><Link href="https://tenten.co/about" className="text-gray-400 hover:text-white transition-colors">О нас</Link></li>
+                <li><Link href="https://tenten.co/learning/" className="text-gray-400 hover:text-white transition-colors">Блог</Link></li>
+                <li><Link href="https://tenten.co/portfolio" className="text-gray-400 hover:text-white transition-colors">Кейсы</Link></li>
+                <li><Link href="https://tenten.co/contact" className="text-gray-400 hover:text-white transition-colors">Контакты</Link></li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">联系</h3>
+              <h3 className="text-lg font-semibold mb-4">Контакты</h3>
               <ul className="space-y-2">
                 <li><Link href="https://t.me/tentencx" className="text-gray-400 hover:text-white transition-colors">Telegram</Link></li>
                 <li><Link href="tel:+886266041039" className="text-gray-400 hover:text-white transition-colors">+886 2 66041039</Link></li>
-                <li><Link href="https://go.tenten.co/map" className="text-gray-400 hover:text-white transition-colors">总部 - 台北</Link></li>
+                <li><Link href="https://go.tenten.co/map" className="text-gray-400 hover:text-white transition-colors">Главный офис - Тайбэй</Link></li>
               </ul>
             </div>
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Tenten Co. 版权所有。</p>
+            <p className="text-gray-400">© 2024 Tenten Co. Все права защищены.</p>
           </div>
         </div>
       </footer>
