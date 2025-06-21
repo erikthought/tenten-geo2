@@ -886,7 +886,7 @@ export const i18nData: { [key: string]: LanguagePack } = {
             },
             {
                 title: "Análise Preditiva",
-                description: "Antecipe tendências de mercado, mudanças ambientais и movimentos competitivos com nossos modelos de dados prospectivos.",
+                description: "Antecipe tendências de mercado, mudanças ambientais e movimentos competitivos com nossos modelos de dados prospectivos.",
             },
             {
                 title: "Dashboards Personalizáveis",
