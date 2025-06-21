@@ -1,103 +1,112 @@
 # Tenten GEO Landing Page
 
-A modern, multilingual landing page for Tenten's Global Expansion Optimization (GEO) services. Built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, production-ready landing page for Tenten's Generative Engine Optimization (AI SEO) services. Built with Next.js 14, TypeScript, and Tailwind CSS following AIDA structure and best UX practices.
 
 ## Features
 
-- 🌍 Multi-language support (12 languages)
-- 🎨 Modern, responsive design
-- 🚀 Built with Next.js 14 and TypeScript
-- 💨 Fast loading with optimized images
-- 📱 Mobile-first responsive design
-- 🎭 Smooth animations with Framer Motion
-- 🔧 SEO optimized
-- 🌟 Accessibility compliant (WCAG 2.2 AA)
+* 🎯 **AIDA Structure**: Attention → Interest → Desire → Action flow
+* 🤖 **AI SEO Focus**: Generative Engine Optimization services
+* 🎨 **Modern Design**: Clean, minimal with elegant shadows and generous whitespace
+* 🚀 **Performance**: Built with Next.js 14 and optimized for speed
+* 📱 **Responsive**: Mobile-first design that works on all devices
+* ♿ **Accessible**: WCAG 2.2 AA compliant with proper contrast and ARIA labels
+* 🎭 **Smooth Animations**: Framer Motion for page and component transitions
+* 💙 **Brand Consistent**: Uses Tenten brand colors and typography
 
-## Supported Languages
+## Tech Stack
 
-- English (en) - Default
-- Traditional Chinese (zh-tw) - 繁體中文
-- Japanese (ja) - 日本語
-- Korean (ko) - 한국어
-- Spanish (es) - Español
-- German (de) - Deutsch
-- French (fr) - Français
-- Portuguese (pt) - Português
-- Indonesian (id) - Bahasa Indonesia
-- Simplified Chinese (zh-cn) - 简体中文
-- Russian (ru) - Русский
-- Arabic (ar) - العربية
+* **Framework**: Next.js 14 with App Router
+* **Language**: TypeScript (strict mode)
+* **Styling**: Tailwind CSS v3 with utility classes
+* **Components**: Shadcn/ui for consistent UI primitives
+* **Animations**: Framer Motion for smooth transitions
+* **Icons**: Lucide React
+* **Fonts**: Inter & Noto Sans TC via Google Fonts
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18.x or higher
-- npm or yarn
+* Node.js 18+ 
+* npm, yarn, or pnpm
 
-### Installation
+### Installation & Development
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/erikthought/tenten-geo2.git
-cd tenten-geo2
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
 # or
-yarn install
-```
+pnpm install
 
-3. Run the development server:
-```bash
+# Start development server
 npm run dev
 # or
-yarn dev
+pnpm dev
+
+# Build for production
+npm run build && npm start
+# or
+pnpm build && pnpm start
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
 ## Project Structure
 
 ```
-tenten-geo2/
-├── app/                    # Next.js app directory
-│   ├── [lang]/            # Language-specific pages
-│   ├── globals.css        # Global styles
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Home page
-├── components/            # React components
-│   ├── ui/               # UI components
-│   └── LanguageSwitcher.tsx
-├── lib/                  # Utility functions
-├── mock-i18n.ts         # Translation data
-└── public/              # Static assets
+├── app/
+│   ├── layout.tsx          # Root layout with fonts & SEO
+│   ├── page.tsx           # Home page loading GeoLandingPage
+│   └── globals.css        # Global styles
+├── components/
+│   ├── GeoLandingPage.tsx # Main landing page component
+│   └── ui/                # Reusable UI components (shadcn/ui)
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       └── textarea.tsx
+└── lib/
+    └── utils.ts           # Utility functions
 ```
+
+## Services & Pricing
+
+### Standard GEO Package - $2,390/month
+- GEO Audit
+- Technical SEO
+- GEO Analysis Report  
+- Keyword Matrix
+- 8 long-form articles (1500-3000 words)
+- Monthly reports
+
+### Premium GEO Package - $5,290/month
+- Everything in Standard
+- 30 long-form articles
+- Dedicated communication channel
+- 12-hour support SLA
+- Bi-weekly reports
 
 ## Deployment
 
-### Deploy to Vercel
-
-The easiest way to deploy is using the [Vercel Platform](https://vercel.com/new).
+### Deploy to Vercel (Recommended)
 
 1. Push your code to GitHub
-2. Import your repository on Vercel
+2. Import repository on [Vercel](https://vercel.com)
 3. Deploy automatically
+
+The landing page is optimized for Vercel deployment with proper Next.js configuration.
 
 ### Environment Variables
 
-No environment variables are currently required for this project.
+No environment variables required for basic deployment.
 
-## Built With
+## Design System
 
-- [Next.js 14](https://nextjs.org/) - React framework
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [Lucide React](https://lucide.dev/) - Icons
-- [Shadcn/ui](https://ui.shadcn.com/) - UI components
+* **Colors**: Primary blue (#2563eb), neutral grays (#F8F9FA → #212529)
+* **Typography**: Inter (primary), Noto Sans TC (fallback), fluid responsive scale
+* **Layout**: Max 1440px width, 12-column grid, 4|8|16|24px spacing
+* **Motion**: 200ms ease-in-out transitions
+* **Accessibility**: 4.5:1+ contrast ratio, logical tab order, ARIA labels
 
 ## License
 
@@ -105,6 +114,6 @@ This project is proprietary software owned by Tenten Co.
 
 ## Contact
 
-- Website: [https://tenten.co](https://tenten.co)
-- Email: [Contact](https://tenten.co/contact)
-- Telegram: [https://t.me/tentencx](https://t.me/tentencx) 
+* **Website**: [tenten.co](https://tenten.co)
+* **Email**: [geo@tenten.co](mailto:geo@tenten.co)
+* **Live Demo**: [landing-tenten-geo.vercel.app](https://landing-tenten-geo.vercel.app) 

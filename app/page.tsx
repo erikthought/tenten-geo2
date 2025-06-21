@@ -1,7 +1,7 @@
 'use client'
 
-import FullLandingPage from '@/components/FullLandingPage'
+import GeoLandingPage from '@/components/GeoLandingPage'
 
-export default function HomePage() {
-  return <FullLandingPage lang="en" />
+export default function Home() {
+  return <GeoLandingPage />
 } 

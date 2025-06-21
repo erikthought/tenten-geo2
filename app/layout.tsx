@@ -1,33 +1,29 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
+import { Inter, Noto_Sans_TC } from 'next/font/google'
+import type { Metadata } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const noto = Noto_Sans_TC({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-noto',
+})
 
 export const metadata: Metadata = {
-  title: 'Tenten GEO | Global Expansion Optimization',
-  description: 'Expand your business globally with AI-powered GEO solutions. Strategic content creation, technical SEO, and multi-market optimization.',
-  keywords: 'GEO, global expansion, international SEO, multi-market, AI-powered content',
+  title: 'Tenten GEO – Generative Engine Optimization (AI SEO) Services',
+  description:
+    'Boost organic visibility at scale with Tenten\'s Generative Engine Optimization. AI-driven keyword research, technical SEO & high-quality content that ranks.',
   openGraph: {
-    title: 'Tenten GEO | Global Expansion Optimization',
-    description: 'Expand your business globally with AI-powered GEO solutions',
-    url: 'https://geo.tenten.co',
+    title: 'Tenten GEO – AI SEO that ranks',
+    description:
+      'Boost organic visibility at scale with Tenten\'s Generative Engine Optimization.',
+    url: 'https://tenten.co/geo',
     siteName: 'Tenten GEO',
-    images: [
-      {
-        url: '/og-image.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tenten GEO | Global Expansion Optimization',
-    description: 'Expand your business globally with AI-powered GEO solutions',
-    images: ['/og-image.jpg'],
+    title: 'Tenten GEO – AI SEO that ranks',
+    description: 'Boost organic visibility at scale with Tenten\'s Generative Engine Optimization.',
   },
 }
 
@@ -37,8 +33,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${inter.variable} ${noto.variable} antialiased`}
+    >
+      <body className="font-sans bg-gray-50 text-gray-800">{children}</body>
     </html>
   )
 } 
