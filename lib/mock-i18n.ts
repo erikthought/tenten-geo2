@@ -1097,5 +1097,3 @@ export const i18nData: { [key: string]: LanguagePack } = {
 export const getI18nData = (lang: string): LanguagePack => {
   return i18nData[lang] || i18nData.en;
 };
-
-</rewritten_file>
