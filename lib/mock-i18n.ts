@@ -328,7 +328,7 @@ export const i18nData: { [key: string]: LanguagePack } = {
       copy: "© 2024 Tenten GEO. 版权所有。",
     },
   },
-  'zh-tw': {
+    'zh-tw': {
     nav: {
       home: "首頁",
       benefits: "優勢",
@@ -530,7 +530,7 @@ export const i18nData: { [key: string]: LanguagePack } = {
         {
           title: "초지역적 정확성",
           description:
-            "첨단 위성 이미지와 AI 기반 분석을 활용하여 전 세계 어디에서나 지역 수준의 세분화된 통찰력을 얻으세요.",
+            "첨단 위성 이미지와 AI 기반 분석을 활용하여 전 세계 어디에서나 지역 수준의 세분화된 통찰력을 얻으세요。",
         },
         {
           title: "글로벌 커버리지",
@@ -600,7 +600,7 @@ export const i18nData: { [key: string]: LanguagePack } = {
       copy: "© 2024 Tenten GEO. 모든 권리 보유.",
     },
   },
-  fr: {
+    fr: {
     nav: {
         home: "Accueil",
         benefits: "Avantages",
@@ -1096,4 +1096,4 @@ export const i18nData: { [key: string]: LanguagePack } = {
 
 export const getI18nData = (lang: string): LanguagePack => {
   return i18nData[lang] || i18nData.en;
-};
+}; 
